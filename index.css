@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Kanit:wght@200;400&family=Poppins:wght@500&display=swap');
+
+*{
+    font-family: "Hind Madurai";
+}
+.degreesContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:20px;
+}
+
+.weatherbtn {
+    background-color:rgb(0, 200, 250);
+    border-radius: 25px;
+}
