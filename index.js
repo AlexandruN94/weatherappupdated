@@ -13,9 +13,11 @@ const weekDaysDictionary = {
 
 const renderCityData = function (data) {
   const cityContainer = document.createElement('div');
+  cityContainer.classList.add('cityContainer');
 
-  const cityName = document.createElement('p');
+  const cityName = document.createElement('h2');
   cityName.innerHTML = data.location.name;
+  cityName.classList.add('cityName');
   cityContainer.appendChild(cityName);
 
   const currentDate = document.createElement('p');
@@ -76,6 +78,21 @@ const getWeatherForCity = city => {
       // });
     });
 };
+
+window.addEventListener('load', e => {
+  console.log(e);
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const { latitude, longitude } = position.coords;
+        getWeatherForCity(`${latitude},${longitude}`);
+      },
+      function () {
+        alert('Could not retrieve your position');
+      }
+    );
+  }
+});
 
 textInputField.addEventListener('keydown', function (e) {
   if (e.key === 'Enter') {
