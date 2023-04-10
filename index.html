@@ -8,11 +8,21 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" name="city" id="city" />
-    <button type="button" class="weatherbtn">Get weather</button>
+    <nav class="nav">
+      <input type="text" name="city" placeholder="Enter city name" id="city" />
+      <input
+        type="number"
+        name="days"
+        id="days"
+        min="1"
+        max="7"
+        placeholder="Forecast days"
+      />
+      <button type="button" class="weatherbtn">Get weather</button>
+    </nav>
 
     <br /><br /><br />
-    <div id="citydata"></div>
+    <section id="citydata"></section>
     <script src="index.js"></script>
   </body>
 </html>
