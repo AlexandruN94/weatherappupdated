@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Kanit:wght@200;400&family=Poppins:wght@500&display=swap');
+
 body {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
 }
+
 * {
   font-family: 'Hind Madurai';
   box-sizing: border-box;
 }
 
-.degreesContainer {
-  display: flex;
-  justify-content: flex-start;
+#city {
+  margin-right: 20px;
+}
+#days {
+  width: 105px;
 }
 
 .nav {
@@ -32,9 +36,12 @@ body {
   margin-left: 10px;
 }
 
-#citydata {
-  /* background-color: aquamarine; */
+.weatherbtn:hover {
+  color: white;
+  background-color: rgb(0, 175, 225);
+}
 
+#citydata {
   width: 100%;
 }
 
@@ -54,88 +61,249 @@ body {
   align-items: stretch;
 }
 
-.leftSide {
+.citydatacontainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   flex: 1;
   max-width: 30%;
-  /* flex-basis: 30%; */
-
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(2px);
-  /* border: 1px solid #ccc; */
   border-radius: 20px;
   padding-left: 20px;
 }
 
-.rightSide {
+.degreesContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  max-width: 30%;
-  /* flex-basis: 30%; */
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(2px);
-  /* border: 1px solid #ccc; */
-  border-radius: 20px;
-  padding: 10px;
+  justify-content: flex-start;
 }
 
 .forecastTitle {
   margin-bottom: 30px;
 }
-/* .rightSide > div {
+
+.forecastdatacontainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-} */
+  justify-content: space-between;
+  flex: 1;
+  max-width: 30%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 10px;
+}
 
-.nightmode {
-  background: url('img/clearskynight.jpg');
+.bg-cover {
   background-size: cover;
 }
 
 /* Weather images */
 
-.partlycloudy {
-  background: url('img/partlycloudy.jpg');
+.night {
+  background: url('img/night.jpg');
   background-size: cover;
 }
 
-.sunnyclear {
-  background: url('img/sunnyclear.jpg');
-  background-size: cover;
+.partlycloudy {
+  background: url('img/partlycloudy.jpg');
+}
+
+.sunny {
+  background: url('img/sunny.jpg');
+}
+
+.clear {
+  background: url('img/clear.jpg');
 }
 
 .cloudy {
   background: url('img/cloudy.jpg');
-  background-size: cover;
 }
 
 .overcast {
   background: url('img/overcast.jpg');
-  background-size: cover;
 }
 
 .mist {
   background: url('img/mist.jpg');
-  background-size: cover;
 }
 
 .patchyrainpossible {
   background: url('img/patchyrainpossible.jpg');
-  background-size: cover;
+}
+
+.patchysnowpossible {
+  background: url('img/patchysnowpossible.jpg');
+}
+
+.patchysleetpossible {
+  background: url('img/patchysleetpossible.jpg');
+}
+
+.patchyfreezingdrizzlepossible {
+  background: url('img/patchyfreezingdrizzlepossible.jpg');
+}
+
+.thunderyoutbreakspossible {
+  background: url('img/thunderyoutbreakspossible.jpg');
+}
+
+.blowingsnow {
+  background: url('img/blowingsnow.jpg');
+}
+
+.blizzard {
+  background: url('img/blizzard.jpg');
+}
+
+.fog {
+  background: url('img/fog.jpg');
+}
+
+.freezingfog {
+  background: url('img/freezingfog.jpg');
+}
+
+.patchylightdrizzle {
+  background: url('img/patchylightdrizzle.jpg');
+}
+
+.lightdrizzle {
+  background: url('img/lightdrizzle.jpg');
+}
+
+.freezingdrizzle {
+  background: url('img/freezingdrizzle.jpg');
+}
+
+.heavyfreezingdrizzle {
+  background: url('img/heavyfreezingdrizzle.jpg');
+}
+
+.patchylightrain {
+  background: url('img/patchylightrain.jpg');
+}
+
+.lightrain {
+  background: url('img/lightrain.jpg');
+}
+
+.moderaterainattimes {
+  background: url('img/moderaterainattimes.jpg');
+}
+
+.moderaterain {
+  background: url('img/moderaterain.jpg');
+}
+
+.heavyrainattimes {
+  background: url('img/heavyrainattimes.jpg');
+}
+
+.heavyrain {
+  background: url('img/heavyrain.jpg');
+}
+
+.lightfreezingrain {
+  background: url('img/lightfreezingrain.jpg');
+}
+
+.moderateorheavyfreezingrain {
+  background: url('img/moderateorheavyfreezingrain.jpg');
+}
+
+.moderateorheavysleet {
+  background: url('img/moderateorheavysleet.jpg');
+}
+
+.patchylightsnow {
+  background: url('img/patchylightsnow.jpg');
+}
+
+.lightsnow {
+  background: url('img/lightsnow.jpg');
+}
+
+.patchymoderatesnow {
+  background: url('img/patchymoderatesnow.jpg');
+}
+
+.moderatesnow {
+  background: url('img/moderatesnow.jpg');
+}
+
+.patchyheavysnow {
+  background: url('img/patchyheavysnow.jpg');
+}
+
+.heavysnow {
+  background: url('img/heavysnow.jpg');
+}
+
+.icepellets {
+  background: url('img/icepellets.jpg');
+}
+
+.lightrainshower {
+  background: url('img/lightrainshower.jpg');
+}
+
+.moderateorheavyrainshower {
+  background: url('img/moderateorheavyrainshower.jpg');
+}
+
+.torrentialrainshower {
+  background: url('img/torrentialrainshower.jpg');
+}
+
+.lightsleetshowers {
+  background: url('img/lightsleetshowers.jpg');
+}
+
+.moderateorheavysleetshowers {
+  background: url('img/moderateorheavysleetshowers.jpg');
+}
+
+.moderatesnowshowers {
+  background: url('img/moderatesnowshowers.jpg');
+}
+
+.moderateorheavysnowshowers {
+  background: url('img/moderateorheavysnowshowers.jpg');
+}
+
+.lightshowersoficepellets {
+  background: url('img/lightshowersoficepellets.jpg');
+}
+
+.moderateorheavyshowersoficepellets {
+  background: url('img/moderateorheavyshowersoficepellets.jpg');
+}
+
+.patchylightrainwiththunder {
+  background: url('img/patchylightrainwiththunder.jpg');
+}
+
+.moderateorheavyrainwiththunder {
+  background: url('img/moderateorheavyrainwiththunder.jpg');
+}
+
+.patchylightsnowwiththunder {
+  background: url('img/patchylightsnowwiththunder.jpg');
+}
+
+.moderateorheavysnowwiththunder {
+  background: url('img/moderateorheavysnowwiththunder.jpg');
 }
 
 @media (max-width: 700px) {
   .cityContainer {
     flex-direction: column;
   }
-  .leftSide,
-  .rightSide {
+  .citydatacontainer,
+  .forecastdatacontainer {
     max-width: 100%;
     margin-bottom: 20px;
   }
